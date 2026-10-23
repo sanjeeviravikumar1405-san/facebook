@@ -32,7 +32,7 @@ test('launch Myntra', async ({ page }) => {
 
     console.log('Minimum price: ₹' + minimumPrice);
 
-    // Task 4: Find product name using minimum price
+    
     const minProductName = await page.locator(
         `//li[@class="product-base"][.//div[@class="product-price"]//span[normalize-space()="Rs. ${minimumPrice}"]]//h4[@class="product-product"]`
     ).first().textContent();
